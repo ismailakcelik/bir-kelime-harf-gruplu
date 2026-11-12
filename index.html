@@ -394,14 +394,14 @@ function generateLetters(lvl){
   const minLen=lvl===1?3:4;
 
   for(let tryCount=0;tryCount<50;tryCount++){
-    let arr=[];
-    for(let i=0;i<3;i++) arr.push(P(sesliler));
-    for(let i=0;i<5;i++) arr.push(P(sessizler));
-    arr.push("*");
+    let base=[];
+    for(let i=0;i<3;i++) base.push(P(sesliler));
+    for(let i=0;i<5;i++) base.push(P(sessizler));
+    const arr=[...base,"*"];
     const words=sozluk.filter(k=>k.length>=minLen&&k.length<=9&&kelimeOlurMu(k,arr,havuzSet));
     if(words.length>=2) return [...shuf(base),"*"];
   }
-  return [...shuf(["K","A","L","E","M","İ","R"]),"*"];
+  return [...shuf(["A","N","E","T","İ","L","A","E"]),"*"];
 }
 
 function draw(){
