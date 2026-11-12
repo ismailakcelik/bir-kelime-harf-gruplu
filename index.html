@@ -399,9 +399,9 @@ function generateLetters(lvl){
     for(let i=0;i<5;i++) arr.push(P(sessizler));
     arr.push("*");
     const words=sozluk.filter(k=>k.length>=minLen&&k.length<=9&&kelimeOlurMu(k,arr,havuzSet));
-    if(words.length>=2) return shuf(arr);
+    if(words.length>=2) return [...shuf(base),"*"];
   }
-  return shuf(["A","N","E","T","İ","L","A","E","*"]);
+  return [...shuf(["K","A","L","E","M","İ","R"]),"*"];
 }
 
 function draw(){
